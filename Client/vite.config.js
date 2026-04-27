@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       "/api": {
-        target: "https://ai-recipe-generator-4y56.onrender.com" || "http://localhost:5000",
+        target: process.env.VITE_BACKEND_URL || "http://localhost:5000",
         changeOrigin: true,
       },
     },
