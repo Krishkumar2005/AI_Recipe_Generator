@@ -20,7 +20,9 @@ export const RecipeProvider = ({ children }) => {
   const [error,             setError]             = useState(null);
   const [dietaryPreference, setDietaryPreference] = useState("");
 
-  const API_BASE = "/api/recipes";
+  //const API_BASE = "/api/recipes";
+
+  const API_BASE = import.meta.env.VITE_API_BASE
 
   const analyzeImage = useCallback(async (imageFile) => {
     setLoading(true);
